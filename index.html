@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>Angular Registration</title>
@@ -14,8 +14,10 @@
   </head>
   <body>
     <nav></nav>
-    <div class="page">
-      <main class="cf"></main>
+    <div class="page"ng-controller="appController">
+      <main class="cf">
+        {{ message }}
+      </main>
     </div>
 
   </body>
