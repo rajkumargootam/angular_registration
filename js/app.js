@@ -4,10 +4,10 @@ myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
   .when('/login',{
     templateUrl:'views/login.html',
-    controller:'LoginController'
+    controller:'RegistrationController'
   })
-  .when('/registaration',{
-    templateUrl:'views/registration.html',
+  .when('/register',{
+    templateUrl:'views/register.html',
     controller:'RegistrationController'
   })
   .when('/sucess',{
@@ -18,7 +18,3 @@ myApp.config(['$routeProvider', function($routeProvider){
     redirectTo: '/login'
   });
 }]);
-
-// myApp.controller('appController',['$scope',function($scope){
-//   $scope.message = "Welcome to my App";
-// }])
