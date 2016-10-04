@@ -8,6 +8,7 @@ myApp.factory('Authentication', ['$rootScope', '$firebaseAuth','$firebaseObject'
     if (authUser) {
       var userRef = new Firebase(FIREBASE_URL + 'users/' + authUser.uid );
       var userObj = $firebaseObject(userRef);
+      console.log(userObj);
       $rootScope.currentUser = userObj;
     } else {
       $rootScope.currentUser = '';
@@ -28,7 +29,11 @@ myApp.factory('Authentication', ['$rootScope', '$firebaseAuth','$firebaseObject'
 
     logout: function(){
       return auth.$unauth();
-    } //logout
+    }, //logout
+
+    requireAuth: function(){
+      return auth.$requireAuth();
+    },//require Authentication
 
     register: function(user) {
       auth.$createUser({
